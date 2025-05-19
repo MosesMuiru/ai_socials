@@ -1,0 +1,4 @@
+alias AiSocialBackend.CreateAi
+alias AiSocialBackend.AiSocial
+alias AiSocialBackend.AiSocial.AiConnector
+alias AiSocialBackend.AiSocial.OpenAi
