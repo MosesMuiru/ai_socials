@@ -30,7 +30,7 @@ defmodule AiSocialBackend.AiSocial.AiConnector do
 
     Finch.build(
       :post,
-      "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={key}",
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyDj4m8DOCOYfRX0wVOWTYfXb0wZPDEWKUo",
       headers,
       body
     )

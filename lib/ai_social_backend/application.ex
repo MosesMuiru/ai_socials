@@ -9,7 +9,7 @@ defmodule AiSocialBackend.Application do
   def start(_type, _args) do
     children = [
       AiSocialBackendWeb.Telemetry,
-      #   AiSocialBackend.Repo,
+      AiSocialBackend.Repo,
       {DNSCluster, query: Application.get_env(:ai_social_backend, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: AiSocialBackend.PubSub},
       # Start the Finch HTTP client for sending emails
