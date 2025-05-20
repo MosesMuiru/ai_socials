@@ -30,7 +30,7 @@ defmodule AiSocialBackend.AiSocial.AiConnector do
 
     Finch.build(
       :post,
-      "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyDj4m8DOCOYfRX0wVOWTYfXb0wZPDEWKUo",
+      "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=",
       headers,
       body
     )
@@ -63,9 +63,6 @@ defmodule AiSocialBackend.AiSocial.AiConnector do
       |> IO.inspect(label: "this --->")
 
     response["text"]
-    |> String.trim()
-    |> String.replace_prefix(" json", "")
-    |> String.replace_suffix(" ", "")
-    |> String.trim()
+    |> IO.inspect(label: "this the last response")
   end
 end

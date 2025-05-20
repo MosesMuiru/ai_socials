@@ -9,7 +9,12 @@
   </div>
 
   <div>
-    {@tile}
+    <%= for {from, response} <- @prompt do %>
+      <p>{response}</p>
+    <% end %>
+    <%= for {from, response} <- @response do %>
+      <p>{response}</p>
+    <% end %>
   </div>
   <.form for={} phx-change="validate" phx-submit="submit" class="absolute bottom-10 ">
     <input type="text" name="prompt" placeholder="Start Chat" class="ml-5 p-2 outline-none" />
